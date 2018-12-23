@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TextFieldGroup from '../Field/TextFieldGroup';
 import {addPost} from '../../actions/postActions';
-import PropsTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 
 class Post extends Component {
@@ -70,14 +70,10 @@ class Post extends Component {
 	}
 }
 
-Post.propsTypes = {
-	post:PropsTypes.object.isRequired,
-	addPost:PropsTypes.func.isRequired
+Post.propTypes = {
+	addPost:PropTypes.func.isRequired
 }
 
 
-const mapStateToProps = state => ({
-	post: state.post
-});
 
-export default connect(mapStateToProps, {addPost})(Post);
+export default connect(null, {addPost})(Post);
