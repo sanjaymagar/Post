@@ -5,6 +5,8 @@ import './App.css';
 import Post from './components/posts/Post';
 import PostItem from './components/posts/PostItem';
 import PostUpdate from './components/posts/Update';
+import Landing from './components/posts/Landing';
+
 
 import Profile from './components/users/Profile';
 import ShowProfile from './components/users/showProfile';
@@ -46,6 +48,12 @@ class App extends Component {
               path="/posts" 
               component = {PostItem} 
             />
+             <Route 
+              exact 
+              path="/landing" 
+              component = {Landing} 
+            />
+            
             
 	        </div>
 	      </BrowserRouter>
